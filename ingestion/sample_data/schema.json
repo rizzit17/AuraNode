@@ -1,0 +1,26 @@
+{
+  "relation_mapping": {
+    "invested in": "INVESTED_IN",
+    "acquired": "ACQUIRED",
+    "purchased": "ACQUIRED",
+    "merged with": "MERGED_WITH",
+    "leads": "LEADS",
+    "bought": "ACQUIRED",
+    "bought out": "ACQUIRED",
+    "directs": "LEADS",
+    "developed": "DEVELOPED"
+  },
+  "canonical_relations": [
+    "MERGED_WITH",
+    "LEADS",
+    "INVESTED_IN",
+    "DEVELOPED",
+    "ACQUIRED"
+  ],
+  "entity_types": [
+    "MODEL",
+    "ORGANIZATION",
+    "COMPANY",
+    "PERSON"
+  ]
+}

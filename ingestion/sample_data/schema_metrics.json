@@ -1,0 +1,17 @@
+{
+  "total_triplets_processed": 11,
+  "raw_relation_labels_count": 9,
+  "canonical_relations_count": 5,
+  "schema_reduction_percentage": "44.44%",
+  "sample_clusters": {
+    "ACQUIRED": [
+      "acquired",
+      "purchased",
+      "bought",
+      "bought out"
+    ],
+    "INVESTED_IN": [
+      "invested in"
+    ]
+  }
+}
