@@ -1,0 +1,140 @@
+{
+  "total_benchmark_questions": 10,
+  "vector_only_retrieval_hit_rate": "100.0%",
+  "auranode_hybrid_retrieval_hit_rate": "100.0%",
+  "hit_rate_improvement": "+0.0%",
+  "citation_coverage": "100.0%",
+  "evaluation_summary": "AuraNode GraphRAG achieved 100.0% context hit-rate vs 100.0% for Vector-Only RAG (+0.0% improvement).",
+  "details": [
+    {
+      "question": "What AI acquisitions has Microsoft made?",
+      "expected_entities": [
+        "OpenAI",
+        "Nuance Communications"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0004]",
+        "[chunk_0000]"
+      ]
+    },
+    {
+      "question": "Who leads Google DeepMind?",
+      "expected_entities": [
+        "Demis Hassabis",
+        "Google DeepMind"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0001]",
+        "[chunk_0002]"
+      ]
+    },
+    {
+      "question": "What open-source LLM model did Meta release?",
+      "expected_entities": [
+        "Llama",
+        "Meta"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0001]",
+        "[chunk_0002]"
+      ]
+    },
+    {
+      "question": "Which networking infrastructure company did Nvidia acquire in 2020?",
+      "expected_entities": [
+        "Mellanox Technologies",
+        "Nvidia"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0003]",
+        "[chunk_0000]"
+      ]
+    },
+    {
+      "question": "What startup acquisitions did Apple make for low-power edge AI?",
+      "expected_entities": [
+        "Xnor.ai",
+        "Apple"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0004]",
+        "[chunk_0003]"
+      ]
+    },
+    {
+      "question": "What platform did Google acquire for data science communities?",
+      "expected_entities": [
+        "Kaggle",
+        "Google"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0001]",
+        "[chunk_0002]"
+      ]
+    },
+    {
+      "question": "Did Nvidia complete its acquisition of ARM Holdings?",
+      "expected_entities": [
+        "ARM Holdings",
+        "Nvidia"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0003]",
+        "[chunk_0000]"
+      ]
+    },
+    {
+      "question": "Which company acquired Run:ai in 2024?",
+      "expected_entities": [
+        "Run:ai",
+        "Nvidia"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0004]",
+        "[chunk_0003]"
+      ]
+    },
+    {
+      "question": "What computer vision team does Yann LeCun direct?",
+      "expected_entities": [
+        "FAIR",
+        "Yann LeCun"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0001]",
+        "[chunk_0002]"
+      ]
+    },
+    {
+      "question": "What company did Apple acquire for AI-powered video compression?",
+      "expected_entities": [
+        "WaveOne",
+        "Apple"
+      ],
+      "vector_only_hit": true,
+      "auranode_hybrid_hit": true,
+      "citations_returned": [
+        "[chunk_0004]",
+        "[chunk_0003]"
+      ]
+    }
+  ]
+}
