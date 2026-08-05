@@ -32,4 +32,11 @@ app.include_router(graph.router)
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=settings.API_PORT)
+    try:
+        uvicorn.run(app, host="0.0.0.0", port=settings.API_PORT)
+    except OSError as e:
+        if "10048" in str(e) or "address" in str(e).lower():
+            print(f"[AuraNode] Port {settings.API_PORT} is in use. Trying port 8001...")
+            uvicorn.run(app, host="0.0.0.0", port=8001)
+        else:
+            raise e
