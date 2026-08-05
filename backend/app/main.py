@@ -1,5 +1,6 @@
 import os
 import sys
+import socket
 
 # Ensure backend directory is in Python path regardless of execution directory
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -30,13 +31,15 @@ app.include_router(health.router)
 app.include_router(query.router)
 app.include_router(graph.router)
 
+def find_available_port(start_port: int = 8000) -> int:
+    for p in range(start_port, start_port + 20):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            if s.connect_ex(("127.0.0.1", p)) != 0:
+                return p
+    return start_port
+
 if __name__ == "__main__":
     import uvicorn
-    try:
-        uvicorn.run(app, host="0.0.0.0", port=settings.API_PORT)
-    except OSError as e:
-        if "10048" in str(e) or "address" in str(e).lower():
-            print(f"[AuraNode] Port {settings.API_PORT} is in use. Trying port 8001...")
-            uvicorn.run(app, host="0.0.0.0", port=8001)
-        else:
-            raise e
+    target_port = find_available_port(settings.API_PORT)
+    print(f"[AuraNode] Starting FastAPI Server on http://localhost:{target_port}")
+    uvicorn.run(app, host="0.0.0.0", port=target_port)
