@@ -1,10 +1,10 @@
-# AuraNode — Self-Optimizing GraphRAG Engine with Autonomous Schema Discovery
+# AuraNode : Self-Optimizing GraphRAG Engine with Autonomous Schema Discovery
 
 > **AuraNode** is a production-grade Graph-Augmented Retrieval-Augmented Generation (GraphRAG) engine that autonomously discovers entity/relation schemas from unstructured text, fuses vector similarity search with N-hop graph traversal, and visualizes interactive reasoning subgraphs in real time.
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Autonomous Schema Discovery**: No hand-authored ontology required. Automatically extracts raw entity-relation triplets and uses embedding-based clustering (`all-MiniLM-L6-v2` + Agglomerative Clustering) to synthesize canonical entity and relationship schemas.
 - **Hybrid Retrieval Architecture**: Combines `pgvector` semantic similarity search over text chunks with 2-hop Neo4j Cypher graph neighborhood traversal.
@@ -15,7 +15,7 @@
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 [Raw Corpus (CC-BY-SA Wikipedia Data)]
@@ -44,14 +44,14 @@
 
 ---
 
-## 📊 Quantitative Benchmark & Schema Metrics
+## Quantitative Benchmark & Schema Metrics
 
 - **Auto-Schema Discovery Efficiency**: Logged in `ingestion/sample_data/schema_metrics.json`.
 - **Retrieval Grounding & Accuracy**: Benchmark script in `backend/eval/benchmark_eval.py` outputs comparative results in `docs/evaluation_report.json`.
 
 ---
 
-## 🛠️ Quick Start
+## Quick Start
 
 ### 1. Prerequisites
 - Python 3.10+
@@ -82,5 +82,5 @@ npm run dev
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the MIT License. Sample corpus data is derived from CC-BY-SA Wikipedia articles.

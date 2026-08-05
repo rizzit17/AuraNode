@@ -1,0 +1,168 @@
+{
+  "nodes": [
+    {
+      "id": "Microsoft",
+      "label": "Microsoft",
+      "type": "COMPANY"
+    },
+    {
+      "id": "OpenAI",
+      "label": "OpenAI",
+      "type": "ORGANIZATION"
+    },
+    {
+      "id": "Nuance Communications",
+      "label": "Nuance Communications",
+      "type": "COMPANY"
+    },
+    {
+      "id": "Google",
+      "label": "Google",
+      "type": "COMPANY"
+    },
+    {
+      "id": "DeepMind",
+      "label": "DeepMind",
+      "type": "ORGANIZATION"
+    },
+    {
+      "id": "Google Brain",
+      "label": "Google Brain",
+      "type": "ORGANIZATION"
+    },
+    {
+      "id": "Demis Hassabis",
+      "label": "Demis Hassabis",
+      "type": "PERSON"
+    },
+    {
+      "id": "Google DeepMind",
+      "label": "Google DeepMind",
+      "type": "ORGANIZATION"
+    },
+    {
+      "id": "Kaggle",
+      "label": "Kaggle",
+      "type": "ORGANIZATION"
+    },
+    {
+      "id": "Meta",
+      "label": "Meta",
+      "type": "COMPANY"
+    },
+    {
+      "id": "MobileEye",
+      "label": "MobileEye",
+      "type": "COMPANY"
+    },
+    {
+      "id": "Yann LeCun",
+      "label": "Yann LeCun",
+      "type": "PERSON"
+    },
+    {
+      "id": "FAIR",
+      "label": "FAIR",
+      "type": "ORGANIZATION"
+    },
+    {
+      "id": "Llama",
+      "label": "Llama",
+      "type": "MODEL"
+    },
+    {
+      "id": "Nvidia",
+      "label": "Nvidia",
+      "type": "COMPANY"
+    },
+    {
+      "id": "Mellanox Technologies",
+      "label": "Mellanox Technologies",
+      "type": "COMPANY"
+    },
+    {
+      "id": "Run:ai",
+      "label": "Run:ai",
+      "type": "COMPANY"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Microsoft",
+      "target": "OpenAI",
+      "relation": "INVESTED_IN",
+      "raw_relation": "invested in",
+      "chunk_id": "chunk_0000"
+    },
+    {
+      "source": "Microsoft",
+      "target": "Nuance Communications",
+      "relation": "ACQUIRED",
+      "raw_relation": "acquired",
+      "chunk_id": "chunk_0000"
+    },
+    {
+      "source": "Google",
+      "target": "DeepMind",
+      "relation": "ACQUIRED",
+      "raw_relation": "purchased",
+      "chunk_id": "chunk_0001"
+    },
+    {
+      "source": "Google",
+      "target": "Google Brain",
+      "relation": "MERGED_WITH",
+      "raw_relation": "merged with",
+      "chunk_id": "chunk_0001"
+    },
+    {
+      "source": "Demis Hassabis",
+      "target": "Google DeepMind",
+      "relation": "LEADS",
+      "raw_relation": "leads",
+      "chunk_id": "chunk_0001"
+    },
+    {
+      "source": "Google",
+      "target": "Kaggle",
+      "relation": "ACQUIRED",
+      "raw_relation": "bought",
+      "chunk_id": "chunk_0001"
+    },
+    {
+      "source": "Meta",
+      "target": "MobileEye",
+      "relation": "ACQUIRED",
+      "raw_relation": "bought out",
+      "chunk_id": "chunk_0002"
+    },
+    {
+      "source": "Yann LeCun",
+      "target": "FAIR",
+      "relation": "LEADS",
+      "raw_relation": "directs",
+      "chunk_id": "chunk_0002"
+    },
+    {
+      "source": "Meta",
+      "target": "Llama",
+      "relation": "DEVELOPED",
+      "raw_relation": "developed",
+      "chunk_id": "chunk_0002"
+    },
+    {
+      "source": "Nvidia",
+      "target": "Mellanox Technologies",
+      "relation": "ACQUIRED",
+      "raw_relation": "bought",
+      "chunk_id": "chunk_0003"
+    },
+    {
+      "source": "Nvidia",
+      "target": "Run:ai",
+      "relation": "ACQUIRED",
+      "raw_relation": "purchased",
+      "chunk_id": "chunk_0003"
+    }
+  ]
+}
