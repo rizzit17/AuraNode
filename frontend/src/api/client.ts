@@ -27,22 +27,49 @@ export interface QueryResponse {
   retrieval_method: string;
 }
 
+const BACKEND_TARGETS = [
+  '/api',
+  'http://localhost:8000/api',
+  'http://localhost:8001/api',
+  'http://localhost:8002/api',
+  'http://127.0.0.1:8000/api',
+  'http://127.0.0.1:8001/api'
+];
+
 export async function sendQuery(question: string, topK: number = 3, hops: number = 2): Promise<QueryResponse> {
-  const response = await fetch('/api/query', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ question, top_k: topK, hops })
-  });
-  if (!response.ok) {
-    throw new Error(`API error: ${response.statusText}`);
+  let lastError: Error | null = null;
+
+  for (const baseUrl of BACKEND_TARGETS) {
+    try {
+      const response = await fetch(`${baseUrl}/query`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question, top_k: topK, hops })
+      });
+      if (response.ok) {
+        return await response.json();
+      }
+    } catch (err: any) {
+      lastError = err;
+    }
   }
-  return response.json();
+
+  throw lastError || new Error("Unable to connect to AuraNode backend server.");
 }
 
 export async function fetchSubgraph(entities: string = '', hops: number = 2): Promise<SubgraphData> {
-  const response = await fetch(`/api/graph/subgraph?entities=${encodeURIComponent(entities)}&hops=${hops}`);
-  if (!response.ok) {
-    throw new Error(`Graph API error: ${response.statusText}`);
+  const queryParam = `?entities=${encodeURIComponent(entities)}&hops=${hops}`;
+  
+  for (const baseUrl of BACKEND_TARGETS) {
+    try {
+      const response = await fetch(`${baseUrl}/graph/subgraph${queryParam}`);
+      if (response.ok) {
+        return await response.json();
+      }
+    } catch (err) {
+      // Continue to next fallback
+    }
   }
-  return response.json();
+
+  return { nodes: [], edges: [], traversal_path: [] };
 }
