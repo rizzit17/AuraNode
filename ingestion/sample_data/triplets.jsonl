@@ -1,0 +1,11 @@
+{"chunk_id": "chunk_0000", "subject": "Microsoft", "subject_type": "COMPANY", "relation": "invested in", "object": "OpenAI", "object_type": "ORGANIZATION"}
+{"chunk_id": "chunk_0000", "subject": "Microsoft", "subject_type": "COMPANY", "relation": "acquired", "object": "Nuance Communications", "object_type": "COMPANY"}
+{"chunk_id": "chunk_0001", "subject": "Google", "subject_type": "COMPANY", "relation": "purchased", "object": "DeepMind", "object_type": "ORGANIZATION"}
+{"chunk_id": "chunk_0001", "subject": "Google", "subject_type": "COMPANY", "relation": "merged with", "object": "Google Brain", "object_type": "ORGANIZATION"}
+{"chunk_id": "chunk_0001", "subject": "Demis Hassabis", "subject_type": "PERSON", "relation": "leads", "object": "Google DeepMind", "object_type": "ORGANIZATION"}
+{"chunk_id": "chunk_0001", "subject": "Google", "subject_type": "COMPANY", "relation": "bought", "object": "Kaggle", "object_type": "ORGANIZATION"}
+{"chunk_id": "chunk_0002", "subject": "Meta", "subject_type": "COMPANY", "relation": "bought out", "object": "MobileEye", "object_type": "COMPANY"}
+{"chunk_id": "chunk_0002", "subject": "Yann LeCun", "subject_type": "PERSON", "relation": "directs", "object": "FAIR", "object_type": "ORGANIZATION"}
+{"chunk_id": "chunk_0002", "subject": "Meta", "subject_type": "COMPANY", "relation": "developed", "object": "Llama", "object_type": "MODEL"}
+{"chunk_id": "chunk_0003", "subject": "Nvidia", "subject_type": "COMPANY", "relation": "bought", "object": "Mellanox Technologies", "object_type": "COMPANY"}
+{"chunk_id": "chunk_0003", "subject": "Nvidia", "subject_type": "COMPANY", "relation": "purchased", "object": "Run:ai", "object_type": "COMPANY"}
