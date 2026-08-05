@@ -1,3 +1,9 @@
+import os
+import sys
+
+# Ensure backend directory is in Python path regardless of execution directory
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
@@ -26,4 +32,4 @@ app.include_router(graph.router)
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=settings.API_PORT, reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=settings.API_PORT)
